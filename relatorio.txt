@@ -1,0 +1,65 @@
+
+RESULTADOS:
+
+Batch size: 32
+Epocas: 10
+Tempo: 30 minutos
+CNN:
+'Test loss : ', 2.2655728507995607
+Accuracy: 0.1583
+
+Batch size: 64
+Epocas: 10
+Tempo: 30 minutos
+CNN:
+('Test loss : ', 2.212323497772217)
+Accuracy: 0.1719
+
+
+Batch size: 64
+Epocas: 10
+Tempo: 10 minutos
+CNN com Data Augmentation:
+('Test loss : ', 2.2898682262420653)
+('Test accuracy : ', 0.1019)
+
+
+PS: segue duas imagens do Data Augmentation:
+	Batch size: 32
+	Epocas: 100
+
+__________________________________________________
+DADOS ADICIONAIS
+
+
+Os dados originais de um lote são (10000 x 3072) colunas - linhas.
+Imagem colorida de 32x32 pixels. 
+O vetor de linha original não é apropriado. 
+Dimensão do tensor de entrada deve ser (largura x altura x num_channel). ---> 32 * 32 * 3 = = 3072. 
+
+SITE: https://towardsdatascience.com/cifar-10-image-classification-in-tensorflow-5b501f7dc77c
+
+__________________________________________________
+
+batch_size - tamanho para calculo do erro antes de arrumar
+num_classes - número de classes de conjuntos de dados cifar-10
+uma época - pega todo mundo do treinamento e compara com todo mundo, onde cada ciclo é uma época.
+__________________________________________________
+
+Camadas de convolução e pooling. 
+Camadas densas para prever os rótulos. 
+Camada de dropout reduz o overfitting (desliga aleatoriamente alguns neurônios da rede, o que força os dados a encontrar novos caminhos).
+Camada flat expande um vetor tridimensional em um vetor unidimensional.
+
+SITE: https://towardsdatascience.com/build-your-own-convolution-neural-network-in-5-mins-4217c2cf964f
+
+__________________________________________________
+
+
+Data Augmentation
+SITE: http://parneetk.github.io/blog/cnn-cifar10/
+SITE: https://github.com/keras-team/keras-contrib/edit/master/examples/cifar10_resnet.py
+
+__________________________________________________
+
+Imprimo a precisão e a perda de classificação nos conjuntos de dados de treinamento e teste em cada época.
